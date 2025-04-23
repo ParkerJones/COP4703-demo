@@ -16,7 +16,8 @@ app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'src', 'public')));
 
 // Routes
-app.use('/', controller_index.render);
+app.get('/', controller_index.render);
+app.post('/execute-sp6', controller_index.execute_sp6);
 
 app.listen(PORT, () => {
 	console.log(`Server is running on http://localhost:${PORT}.`)

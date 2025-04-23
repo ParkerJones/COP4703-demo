@@ -35,38 +35,41 @@
 				Payment_Method VARCHAR
 			-->
 			<label for="receipt_number">Receipt_Number:</label>
-			<input type="number" min="0" name="receipt_number"></input>
+			<input type="number" min="0" id="receipt_number" name="receipt_number"></input>
 
 			<label for="owner_id">Owner_ID:</label>
-			<input type="number" min="0" name="owner_id"></input>
+			<input type="number" min="0" id="owner_id" name="owner_id"></input>
 
 			<label for="store_id">Store_ID:</label>
-			<input type="number" min="0" name="store_id"></input>
+			<input type="number" min="0" id="store_id" name="store_id"></input>
 
 			<label for="clerk_id">Clerk_ID:</label>
-			<input type="number" min="0" name="clerk_id"></input>
+			<input type="number" min="0" id="clerk_id" name="clerk_id"></input>
+
+			<label for="date">Date:</label>
+			<input type="date" id="date" name="date"></input>
 
 			<label for="time">Time:</label>
-			<input type="datetime" name="time"></input>
+			<input type="time" id="time" name="time"></input>
 
 			<label for="total_items">Total_Items:</label>
-			<input type="number" min="0" name="total_items"></input>
+			<input type="number" min="0" id="total_items" name="total_items"></input>
 
 			<label for="tax_paid">Tax_Paid:</label>
-			<input type="number" name="tax_paid"></input>
+			<input type="number" id="tax_paid" name="tax_paid"></input>
 
 			<label for="total_paid">Total_Paid:</label>
-			<input type="number" name="total_paid"></input>
+			<input type="number" id="total_paid" name="total_paid"></input>
 
 			<label for="payment_method">Payment_Method:</label>
-			<select name="payment_method">
+			<select id="payment_method" name="payment_method">
 				<option value="placeholder">(Select an option)</option>
 				<option value="Debit">Debit</option>
 				<option value="Credit">Credit</option>
 			</select>
 		</form>
-		<button type="button" id="" onclick="Execute_SP6()">Run SP6</button>
+		<button type="button" onclick="Execute_SP6()">Run SP6</button>
 	</div>
-	<script src="js/script.js"></script>
+	<script src="client.js"></script>
 </body>
 </html>
