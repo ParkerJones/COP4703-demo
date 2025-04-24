@@ -11,11 +11,12 @@
 	<header>
 		<h1>Project 2 Demo App</h1>
 	</header>
-	<hr>
 	<div id="div-udf2">
 		<h2>UDF2</h2>
 		<p><span class="bold">Definition:</span> Accepts no parameters. Returns a table showing the average expense of each month. The table includes the columns: Month, Year, and Average Expense.</p>
 		<button type="button" id="" onclick="Execute_UDF2()">Run UDF2</button>
+		<table id="udf2-table">
+		</table
 	</div>
 	<hr>
 	<div id="div-sp6">
@@ -34,41 +35,97 @@
 				Total_Paid DECIMAL,
 				Payment_Method VARCHAR
 			-->
-			<label for="receipt_number">Receipt_Number:</label>
-			<input type="number" min="0" id="receipt_number" name="receipt_number"></input>
 
-			<label for="owner_id">Owner_ID:</label>
-			<input type="number" min="0" id="owner_id" name="owner_id"></input>
+			<div class="line-item">
+				<label for="receipt_number">Receipt_Number:</label>
+				<input type="number" min="0" id="receipt_number" name="receipt_number"></input>
+			</div>
 
-			<label for="store_id">Store_ID:</label>
-			<input type="number" min="0" id="store_id" name="store_id"></input>
+			<div class="line-item">
+				<label for="owner_id">Owner_ID:</label>
+				<input type="number" min="0" id="owner_id" name="owner_id"></input>
+			</div>
 
-			<label for="clerk_id">Clerk_ID:</label>
-			<input type="number" min="0" id="clerk_id" name="clerk_id"></input>
+			<div class="line-item">
+				<label for="store_id">Store_ID:</label>
+				<input type="number" min="0" id="store_id" name="store_id"></input>
+			</div>
 
-			<label for="date">Date:</label>
-			<input type="date" id="date" name="date"></input>
+			<div class="line-item">
+				<label for="clerk_id">Clerk_ID:</label>
+				<input type="number" min="0" id="clerk_id" name="clerk_id"></input>
+			</div>
 
-			<label for="time">Time:</label>
-			<input type="time" id="time" name="time"></input>
+			<div class="line-item">
+				<label for="date">Date:</label>
+				<input type="date" id="date" name="date"></input>
+			</div>
 
-			<label for="total_items">Total_Items:</label>
-			<input type="number" min="0" id="total_items" name="total_items"></input>
+			<div class="line-item">
+				<label for="time">Time:</label>
+				<input type="time" id="time" name="time"></input>
+			</div>
 
-			<label for="tax_paid">Tax_Paid:</label>
-			<input type="number" id="tax_paid" name="tax_paid"></input>
+			<div class="line-item">
+				<label for="total_items">Total_Items:</label>
+				<input type="number" min="0" id="total_items" name="total_items"></input>
+			</div>
 
-			<label for="total_paid">Total_Paid:</label>
-			<input type="number" id="total_paid" name="total_paid"></input>
+			<div class="line-item">
+				<label for="tax_paid">Tax_Paid:</label>
+				<input type="number" id="tax_paid" name="tax_paid"></input>
+			</div>
 
-			<label for="payment_method">Payment_Method:</label>
-			<select id="payment_method" name="payment_method">
-				<option value="placeholder">(Select an option)</option>
-				<option value="Debit">Debit</option>
-				<option value="Credit">Credit</option>
-			</select>
+			<div class="line-item">
+				<label for="total_paid">Total_Paid:</label>
+				<input type="number" id="total_paid" name="total_paid"></input>
+			</div>
+
+			<div class="line-item">
+				<label for="payment_method">Payment_Method:</label>
+				<select id="payment_method" name="payment_method">
+					<option value="placeholder">(Select an option)</option>
+					<option value="Debit">Debit</option>
+					<option value="Credit">Credit</option>
+				</select>
+			</div>
+
 		</form>
 		<button type="button" onclick="Execute_SP6()">Run SP6</button>
+		<h3>Output</h3>
+		<div class="textbox">
+			<p id="output-paragraph"></p>
+		</div>
+		<hr>
+		<form id="selectquery">
+			<p>SELECT * FROM receipts WHERE Receipt_Number = "</p><input type="number" id="_receipt_number"></input><p>"</p>
+			<button type="button" onclick="Execute_SelectQuery()">Execute Query</button>
+		</form> 
+		<table id="output-table">
+			<tr>
+				<td class="c"></td>
+				<td class="c"></td>
+				<td class="c"></td>
+				<td class="c"></td>
+				<td class="c"></td>
+				<td class="c"></td>
+				<td class="c"></td>
+				<td class="c"></td>
+				<td class="c"></td>
+			</tr>
+			<tr>
+				<td class="d"></td>
+				<td class="d"></td>
+				<td class="d"></td>
+				<td class="d"></td>
+				<td class="d"></td>
+				<td class="d"></td>
+				<td class="d"></td>
+				<td class="d"></td>
+				<td class="d"></td>
+			</tr>
+
+		</table>
 	</div>
 	<script src="client.js"></script>
 </body>

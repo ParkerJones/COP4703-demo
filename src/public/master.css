@@ -1,0 +1,55 @@
+/* Header styling */
+header {
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+p {
+	font-size: 1.25rem;
+}
+
+h1 {
+	font-size: 3rem;
+	margin-bottom: 0.5rem;
+}
+
+h2 {
+	font-size: 3rem;
+	margin-bottom: 0.5rem;
+}
+
+h3 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+	margin-bottom: 0.5rem;
+}
+button {
+	font-size: 1rem;
+}
+
+input {
+	margin-bottom: 0.5rem;
+}
+
+input, label, select, option {
+	font-size: 1rem;
+}
+
+.line-item {
+	display: flex;
+	justify-content: space-between;
+	width: 350px;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+#selectquery p,
+#selectquery input {
+	display: inline;
+}
+
+/* Section/card styling */
+#div-udf2, #div-sp6 {
+	background-color: #fff;
