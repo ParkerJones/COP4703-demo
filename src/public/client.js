@@ -91,6 +91,9 @@ async function Execute_SP6() {
 }
 
 async function Execute_SelectQuery() {
+	const element_table = document.querySelector('#output-table');
+	element_table.classList.add('visible');
+
 	const element_receipt_number = document.querySelector('#_receipt_number');
 	const receipt_number = element_receipt_number.value;
 

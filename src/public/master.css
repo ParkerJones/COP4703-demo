@@ -1,11 +1,10 @@
-/* Header styling */
 header {
 	text-align: center;
 	margin-bottom: 2rem;
 }
 
 p {
-	font-size: 1.25rem;
+	font-size: 1.5rem;
 }
 
 h1 {
@@ -24,7 +23,7 @@ h3 {
 	margin-bottom: 0.5rem;
 }
 button {
-	font-size: 1rem;
+	font-size: 1.5rem;
 }
 
 input {
@@ -45,6 +44,23 @@ input, label, select, option {
 	font-weight: bold;
 }
 
+table {
+	border-collapse: collapse;
+	width: 80vw;
+}
+
+#output-table {
+	display: none;
+}
+#output-table.visible {
+	display: block;
+}
+
+td {
+	border: solid black 1px;
+	font-size: 1.5rem;
+}
+
 #selectquery p,
 #selectquery input {
 	display: inline;
@@ -52,4 +68,7 @@ input, label, select, option {
 
 /* Section/card styling */
 #div-udf2, #div-sp6 {
-	background-color: #fff;
+	display: block;
+	margin: 0 auto;
+	width: 80vw;
+}

@@ -3,7 +3,7 @@ const sql = require('mssql');
 const sql_config = {
 	user: 'node_user',
 	password: 'node',
-	server: '192.168.68.69',	// KEEP NOTE OF THIS!!!!!!!!!!!!!! 
+	server: '192.168.1.7',	// KEEP NOTE OF THIS!!!!!!!!!!!!!! 
 	database: 'EERDBS-15',
 	options: {
 		encrypt: true, 
@@ -47,7 +47,7 @@ exports.execute_sp6 = async (req, res) => {
 			.input('Owner_ID', sql.Int, owner_id)
 			.input('Store_ID', sql.Int, store_id)
 			.input('Clerk_ID', sql.Int, clerk_id)
-			.input('Time', sql.DateTime, new Date(time)) // assuming ISO format from input
+			.input('Time', sql.DateTime, new Date(time))
 			.input('Total_Items', sql.Int, total_items)
 			.input('Tax_Paid', sql.Money, tax_paid)
 			.input('Total_Paid', sql.Money, total_paid)
