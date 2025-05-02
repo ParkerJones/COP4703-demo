@@ -3,7 +3,7 @@ const sql = require('mssql');
 const sql_config = {
 	user: 'node_user',
 	password: 'node',
-	server: '192.168.1.7',	// KEEP NOTE OF THIS!!!!!!!!!!!!!! 
+	server: 'localhost',	// KEEP NOTE OF THIS!!!!!!!!!!!!!! 
 	database: 'EERDBS-15',
 	options: {
 		encrypt: true, 
